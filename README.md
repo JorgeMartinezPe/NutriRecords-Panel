@@ -9,3 +9,11 @@ Install all required dependencies using:
 
 ```bash
 pip install -r requirements.txt
+## Environment Variables
+
+This project requires environment variables for configuration (e.g., database credentials).
+
+Create a `.env` file in the root directory based on the provided `.env.example` file and set the appropriate values:
+
+```bash
+cp .env.example .env
