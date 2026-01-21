@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriRecords Panel</title>
+    <link rel="stylesheet" href="static\css\home.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="logo">NutriRecords Panel</div>
+    <div class="search">
+      <input type="text" placeholder="Buscar paciente..." />
+    </div>
+    <div class="top-icons">⚙️ 🔔 ⬇️</div>
+  </header>
+
+  <!-- CONTENT -->
+  <div class="container">
+
+    <section class="main">
+
+      <!-- WELCOME -->
+      <div class="welcome">
+        <div>
+          <h1>Buenos días, Dr. {{user_name}}</h1><button><a href="{{ url_for('logout.logout_session') }}">Cerrar sesion</a></button>
+          <p>Hoy tienes 3 consultas programadas</p>
+        </div>
+        <button class="btn-primary"><a href="{{url_for('consulta.modo_consulta') }}">Modo consulta</a></button>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats">
+        <div class="stat-card">
+          <div>
+            <strong>{{datos_home.total_pacientes}}</strong><br />
+            <span>Pacientes activos</span>
+          </div>
+          <div class = "agrega-paciente"> <a href="{{ url_for('agregar_paciente.agregar_paciente_boton')}}">+</a>
+
+          </div>
+        </div>
+        <div class="stat-card">
+          <div>
+            <strong>3</strong><br />
+            <span>Consultas hoy</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div>
+            <strong>1</strong><br />
+            <span>Casos críticos</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div>
+            <strong>1</strong><br />
+            <span>Pacientes estancados</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHART + NEXT -->
+      <div class="grid-2">
+        <div class="card">
+          <h3>Progreso promedio de pacientes (6 meses)</h3>
+          <div class="chart-placeholder"></div>
+        </div>
+        <div class="card">
+          <h3>Próximas consultas</h3>
+          <p>Paciente | Hora | Motivo de consulta</p>
+        </div>
+      </div>
+
+      <!-- ACTIVITY + ACTIONS -->
+      <div class="grid-2">
+        <div class="card">
+          <h3>Actividad reciente</h3>
+          <ul>
+            <li>Consultas completadas hoy</li>
+            <li>Planes enviados</li>
+            <li>Cambios de progreso</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Acciones rápidas</h3>
+          <div class="actions">
+            <button class="action-btn">📄 Historial</button>
+            <button class="action-btn">➕ Nuevo paciente</button>
+            <button class="action-btn">📤 Enviar plan rápido</button>
+            <button class="action-btn">🗑️ Eliminar paciente</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLANS -->
+      <div class="card">
+        <h3>Cumplimiento de planes (%)</h3>
+        <div class="actions">
+          <button class="action-btn">📝 Crear plan</button>
+          <button class="action-btn">📚 Planes disponibles</button>
+          <button class="action-btn">📊 Reportes</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="card">
+        <h3>Avisos del sistema</h3>
+        <div class="alert warning">Plan 1 no está siendo efectivo</div>
+        <div class="alert danger">Plan 2 no está siendo cumplido</div>
+        <div class="alert success">Plan 3 dio mejores resultados</div>
+      </div>
+    </aside>
+
+  </div>
+</body>
+</html>

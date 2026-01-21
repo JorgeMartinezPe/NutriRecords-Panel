@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f8;
+}
+
+/* TOPBAR */
+.topbar {
+    background: #2fb389;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.logo {
+    font-weight: 600;
+}
+
+.search input {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    width: 300px;
+}
+
+.icons {
+    margin-left: auto;
+    display: flex;
+    gap: 15px;
+}
+
+/* MAIN */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.section-title {
+    background: #2fb389;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* LAYOUT */
+.layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+}
+
+/* LEFT */
+.block-title {
+    display: block;
+    background: #cfeae0;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* CHIPS */
+.chip-box {
+    background: #f9fafb;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.chip {
+    background: #bfe6d7;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.add {
+    background: #2fb389;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* RIGHT */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th, td {
+    border: 1px solid #e1e1e1;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #f0f0f0;
+}
+
+input[type="time"] {
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTON */
+.primary {
+    background: #2fb389;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+}

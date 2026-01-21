@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>NutriRecords – Fase 2</title>
+    <link rel="stylesheet" href="static\css\ConsultaPhase2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">NutriRecords Panel</div>
+    <div class="search">
+        <input type="text" placeholder="Buscar...">
+    </div>
+    <div class="icons">
+        <span>⬇</span>
+        <span>⚙</span>
+        <span>🔔</span>
+    </div>
+</header>
+
+<main class="container">
+    <section class="card">
+        <div class="section-title">Datos alimenticios del paciente</div>
+
+        <div class="layout">
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="left">
+
+                <label for = "Tipo_dieta " class="block-title">Tipo de dieta:</label>
+                <select>
+                    <option>Seleccionar dieta</option>
+                    <option>Balanceada</option>
+                    <option>Vegetariana</option>
+                    <option>Vegana</option>
+                    <option>Keto</option>
+                </select>
+
+                <label for="Preferencias" class="block-title">Preferencias de alimentos</label>
+                <div class="chip-box">
+                    <span class="chip">Lácteos ✕</span>
+                    <span class="chip">Frutos secos ✕</span>
+                    <span class="chip">Salchichas ✕</span>
+                    <button class="add">Añadir +</button>
+                </div>
+
+                <label for="Rechazos" class="block-title">Alimentos que no gustan</label>
+                <div class="chip-box">
+                    <span class="chip">Pescado ✕</span>
+                    <span class="chip">Chayote ✕</span>
+                    <span class="chip">Pastas ✕</span>
+                    <button class="add">Añadir +</button>
+                </div>
+
+                <label for= "Alergias" class="block-title">Alergias</label>
+                <div class="chip-box">
+                    <span class="chip">Mariscos ✕</span>
+                    <span class="chip">Cacahuates ✕</span>
+                    <span class="chip">Nuez ✕</span>
+                    <button class="add">Añadir +</button>
+                </div>
+
+                <label for="Suplementos" class="block-title">Suplementos</label>
+                <div class="chip-box">
+                    <span class="chip">Vitamina B ✕</span>
+                    <span class="chip">Vitamina C ✕</span>
+                    <span class="chip">Complejo B ✕</span>
+                    <button class="add">Añadir +</button>
+                </div>
+
+            </div>
+
+            <!-- COLUMNA DERECHA -->
+            <div class="right">
+                <label  for="Horarios" class="block-title">Horarios de comida</label>
+
+                <table>
+                    <tr>
+                        <th>Comida</th>
+                        <th>Horario</th>
+                    </tr>
+                    <tr>
+                        <td>Desayuno</td>
+                        <td><input type="time" value="07:00"></td>
+                    </tr>
+                    <tr>
+                        <td>Colación</td>
+                        <td><input type="time" value="11:00"></td>
+                    </tr>
+                    <tr>
+                        <td>Comida</td>
+                        <td><input type="time" value="13:00"></td>
+                    </tr>
+                    <tr>
+                        <td>Cena</td>
+                        <td><input type="time"></td>
+                    </tr>
+                </table>
+
+                <button class="primary">Siguiente</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

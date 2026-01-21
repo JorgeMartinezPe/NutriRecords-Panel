@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Paso 1</title>
+    <link rel="stylesheet" href="static\css\ConsultaPhase1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">NutriRecords Panel</div>
+    <div class="search">
+        <input type="text" placeholder="Buscar...">
+    </div>
+    <div class="icons">
+        <span>⬇</span>
+        <span>⚙</span>
+        <span>🔔</span>
+    </div>
+</header>
+
+<main class="container">
+    <section class="card">
+        <h2>Datos del usuario</h2>
+
+        <div class="grid-4">
+            <input type="text" placeholder="Nombre del paciente">
+            <input type="text" placeholder="Apellido">
+            <input type="number" placeholder="Edad">
+            <div class="group">
+                <input type="number" placeholder="Peso">
+                <input type="number" placeholder="Altura">
+            </div>
+        </div>
+
+        <h3>Contacto:</h3>
+        <div class="grid-4">
+            <input type="email" placeholder="Correo electrónico">
+            <input type="tel" placeholder="Teléfono">
+            <input type="tel" placeholder="Teléfono 2">
+            <input type="text" placeholder="Redes sociales">
+        </div>
+
+        <h3>Historial de Salud:</h3>
+        <div class="grid-4">
+            <div class="mini-card">
+                <span>Enfermedades</span>
+                <button>+</button>
+            </div>
+            <div class="mini-card">
+                <span>Antecedentes familiares</span>
+                <button>🔍</button>
+            </div>
+            <div class="mini-card">
+                <span>Medicamentos</span>
+                <button>+</button>
+            </div>
+            <div class="mini-card">
+                <span>Alergias</span>
+                <button>+</button>
+            </div>
+        </div>
+
+        <h3>Datos adicionales:</h3>
+        <div class="notes">
+            <textarea placeholder="Notas..."></textarea>
+        </div>
+
+        <button class="primary"><a href="{{url_for('consultafase2.consulta_fase_2') }}">Siguiente</a></button>
+    </section>
+</main>
+
+</body>
+</html>
+
+
