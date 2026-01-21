@@ -8,8 +8,8 @@ class Config:
 
     DB_USER = os.getenv("POSTGRES_USER")
     DB_PASS = os.getenv("POSTGRES_PASSWORD")
-    DB_HOST = os.getenv("POSTGRES_HOST", "localhost")
-    DB_PORT = os.getenv("POSTGRES_PORT", "5432")
+    DB_HOST = os.getenv("POSTGRES_HOST", "Name of host")
+    DB_PORT = os.getenv("POSTGRES_PORT", "Number of port")
     DB_NAME = os.getenv("POSTGRES_DB")
 
     SQLALCHEMY_DATABASE_URI = (
@@ -17,3 +17,4 @@ class Config:
     )
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
